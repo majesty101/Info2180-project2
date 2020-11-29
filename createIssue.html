@@ -4,11 +4,67 @@
     <title>Info2180-Project2</title>
         <!--Stylesheet link-->
          <link rel="stylesheet" href="styles.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
          
          
     </head>
 
     <body>
+        <div class= "header">
+            <h1>BugMe Issue Tracker</h1>
+            <i class="fa fa-bug"></i>
+        </div>
+        
+         <!--SideBar-->
+        <div class = "sidebar">
+            <i class="fa fa-home"></i><a href="#homet">Home</a>
+            <i class="fa fa-user-plus"></i><a href="#addUser">Add User</a>
+            <i class="fa fa-plus"></i><a href="#newIssue">New Issue</a>
+            <i class="fa fa-sign-out"></i><a href="#LogOut">Logout</a>
+
+        </div>
+         <!--Forms-->
+        <div class= "body">
+            <h2>Create Issue</h2>
+
+            <form>
+                <label for="title">Title</label><br>
+                <input type="text" id="title" name="title">
+                <br><br>
+
+                <label for="description">Description</label><br>
+                <input type="text" id="description" name="description">
+                <br><br>
+
+                <label for="assign">Assign To</label><br>
+                <select id="assignstuff" name="assign">
+                    <option value="tom">Tom</option>
+                    <option value="jan">Jan</option>
+                    <option value="marsha">Marsha</option>
+                    <option value="mike">Mike</option>
+                    <option value="marcia">Marcia</option>
+                  </select>
+                <br><br>
+                <label for="">Bug</label><br>
+                <select id="bugstuff" name="bug">
+                    <option value="bug">Bug</option>
+                    <option value="proposal">Propsal</option>
+                    <option value="task">Task</option>
+                  </select><br><br>
+                
+
+                  <label for="prio">Priority</label><br>
+                <select id="prioritytuff" name="priority">
+                    <option value="minor">Minor</option>
+                    <option value="major">Major</option>
+                    <option value="critical">Critical</option>
+                  </select><br><br>
+                
+            <button type="submit" id="searchbtn">Submit</button>
+            
+              </form>
+        </div>
+
 
     </body>
 
