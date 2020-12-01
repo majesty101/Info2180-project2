@@ -11,16 +11,31 @@
 
     <body>
         <div class= "header">
-            <h1>BugMe Issue Tracker</h1>
             <i class="fa fa-bug"></i>
+            <h1>BugMe Issue Tracker</h1> 
         </div>
         
          <!--SideBar-->
-        <div class = "sidebar">
-            <i class="fa fa-home"></i><a href="#homet">Home</a>
-            <i class="fa fa-user-plus"></i><a href="#addUser">Add User</a>
-            <i class="fa fa-plus"></i><a href="#newIssue">New Issue</a>
-            <i class="fa fa-sign-out"></i><a href="#LogOut">Logout</a>
+         <div class = "sidebar">
+            <div>
+                <i class="fa fa-home"></i>
+                <a href="#homet">Home</a>
+            </div>
+
+            <div>
+                <i class="fa fa-user-plus"></i>
+                <a href="#addUser">Add User</a>
+            </div>
+
+            <div>
+                <i class="fa fa-plus"></i>
+                <a href="#newIssue">New Issue</a>
+            </div>
+
+            <div>
+                <i class="fa fa-sign-out"></i>
+                <a href="#LogOut">Logout</a>
+            </div>       
 
         </div>
          <!--Forms-->
@@ -33,7 +48,7 @@
                 <br><br>
 
                 <label for="description">Description</label><br>
-                <input type="text" id="description" name="description">
+                <textarea type="text" id="description" name="description"></textarea>
                 <br><br>
 
                 <label for="assign">Assign To</label><br>
