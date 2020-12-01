@@ -87,6 +87,9 @@ form label{
 
 /*New User Code End*/
 
+
+/*Create Issue Code Start*/
+
 #description{
     background-color: #ededed;
     border: 1;
@@ -109,7 +112,63 @@ select{
     padding-left: 10px;
 }
 
-
-/*Create Issue Code Start*/
-
 /*Create Issue Code End*/
+
+
+/*Detailed Issue Code Start*/
+
+#issue{
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+#para{
+    margin-top: 20px;
+    margin-left: 20px;
+    max-width: 800px;
+    text-align: justify;
+}
+
+#asidemain{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    max-width: 200px;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    bottom: 105px;
+}
+
+#aside{    
+    padding: 10px;
+    border: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: #d3d3d3;   
+}
+
+#markclosed{
+    border: none;
+    border-radius: 5px;
+    background-color: #0c71e0;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 50px 10px 50px;
+    margin-top: 20px;
+
+}
+
+#markinprog{
+    border: none;
+    border-radius: 5px;
+    background-color: #4c9a2a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 30px 10px 30px;
+    margin-top: 20px;
+
+
+}
+/*Detailed Issue Code End*/
