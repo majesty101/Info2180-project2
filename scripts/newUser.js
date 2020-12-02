@@ -18,7 +18,7 @@ window.onload = function(){
         }else{
             alert("Password must contain one letter, one number, one capital letter and consist of 8 characters");
         }
-        request.open("POST","http://localhost:8080/?fname=" + firstname + "lname=" + lastname + "email=" + mail + "password=" + pass,true)
+        request.open("POST","http://localhost:8080/database.php?fname=" + firstname + "lname=" + lastname + "email=" + mail + "password=" + pass,true)
         request.onreadystatechange = function() {
             if (this.DONE && this.status == 200) {
                 alert("User added.");
