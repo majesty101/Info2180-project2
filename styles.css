@@ -37,8 +37,8 @@ body{
     flex-direction: column;
     background-color: #d3d3d3;
     grid-row: 2;
+    padding: 20px;
 }
-
 
 .sidebar div{
     margin-top: 20px;
@@ -89,7 +89,6 @@ form label{
 
 
 /*Create Issue Code Start*/
-
 #description{
     background-color: #ededed;
     border: 1;
@@ -113,13 +112,76 @@ select{
 }
 
 /*Create Issue Code End*/
+#issue{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;  
+}
 
+#allissue{
+    background-color: blue; /* Blue */
+    border: none;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+#openissue{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+#ticket{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.filterbtns {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+}
 
 /*Detailed Issue Code Start*/
-
 #issue{
     margin-left: 20px;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 #para{
