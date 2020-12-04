@@ -20,7 +20,7 @@ CREATE TABLE `issues`(
     `discription` text NOT NULL default '',
     `type` varchar(15) NOT NULL default '',
     `priority` varchar(20) NOT NULL default '',
-    `status` varchar(20) NOT NULL default '',
+    `status` varchar(20) NOT NULL default 'Open',
     `assigned_to` int(5) NOT NULL default 0,
     `created_by` int(5) NOT NULL default 0,
     `created` DATETIME NOT NULL default  current_timestamp,

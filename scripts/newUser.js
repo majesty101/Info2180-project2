@@ -23,7 +23,7 @@ window.onload = function(){
                 alert("Please enter a vaild email");
             }else{
 
-                httpRequest.open("GET","http://localhost/Info2180-project2/database/database.php?context=newUser&fname=" + firstname + "&lname=" + lastname + "&password=" + pass + "&email=" + mail);
+                httpRequest.open("GET","http://localhost/Info2180-project2/database/index.php?context=newUser&fname=" + firstname + "&lname=" + lastname + "&password=" + pass + "&email=" + mail);
                 httpRequest.send();
                 httpRequest.onreadystatechange = function(){
                     if (httpRequest.readyState == 4 && httpRequest.status == 200){
