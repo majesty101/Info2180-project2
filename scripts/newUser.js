@@ -21,7 +21,7 @@ window.onload = function(){
         request.open("GET","http://localhost:8080/index.php?context=newUser&fname=" + firstname + "&lname=" + lastname + "&email=" + mail + "&password=" + pass,true)
         request.onreadystatechange = function() {
             if (this.DONE && this.status == 200) {
-                alert("User added.");
+                alert(this.responseText);
             }
         }
     })
