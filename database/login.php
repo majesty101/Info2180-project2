@@ -1,6 +1,8 @@
 <?php      
-    
+
     include('config.php');  
+    if(!isset($_SESSION)){
+    session_start();
     $username = $_GET['user'];  
     $password = $_GET['pass'];  
       
@@ -12,7 +14,7 @@
         if (count($result) != 0){
             $row = $result[0];
             if(password_verify($password,$row['password'])){
-                session_start();
+
                 $_SESSION['user'] = $row['id'];
                 echo('redirect');
         }else{
@@ -21,3 +23,7 @@
     }else{
         echo('Incorrect Username');
     }
+   
+}else{
+
+}

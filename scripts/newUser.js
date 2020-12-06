@@ -14,15 +14,20 @@ window.onload = function(){
         let mail = email.value;
         var request = new XMLHttpRequest();
         if(regex.test(pass)){
-            alert("Password accepted")
+            request.open("GET","http://localhost/Info2180-project2/database/index.php?context=newUser&fname=" + firstname + "&lname=" + lastname + "&email=" + mail + "&password=" + pass,true);
+            request.send();
+            request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                    alert("User added.");
+                    fname.value = '';
+                    lname.value = '';
+                    password.value = '';
+                    email.value = '';
+                }
+            }
         }else{
             alert("Password must contain one letter, one number, one capital letter and consist of 8 characters");
         }
-        request.open("GET","http://localhost:8080/index.php?context=newUser&fname=" + firstname + "&lname=" + lastname + "&email=" + mail + "&password=" + pass,true)
-        request.onreadystatechange = function() {
-            if (this.DONE && this.status == 200) {
-                alert("User added.");
-            }
-        }
+
     })
 }

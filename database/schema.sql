@@ -12,12 +12,16 @@ CREATE TABLE `users`(
     PRIMARY KEY (`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
 
+LOCK TABLES `users` WRITE;
+INSERT INTO `users` (firstname,lastname,password,email)VALUES ('Jody','Harrison','Password123','admin@project2.com');
+UNLOCK TABLES;
+
 
 /* Creating the isssues table*/
 CREATE TABLE `issues`(
     `id` int(5) NOT NULL auto_increment,
-    `title` varchar(12) NOT NULL default '',
-    `discription` text NOT NULL default '',
+    `title` varchar(20) NOT NULL default '',
+    `description` text(100) NOT NULL default '',
     `type` varchar(15) NOT NULL default '',
     `priority` varchar(20) NOT NULL default '',
     `status` varchar(20) NOT NULL default 'Open',

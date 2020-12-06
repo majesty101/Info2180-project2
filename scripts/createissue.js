@@ -1,17 +1,30 @@
 window.onload = function() {
-    var title = document.getElementById("title");
-    var description = document.getElementById("description");
-    var assign = document.getElementById("assignstuff");
-    var bugs = document.getElementById("bugstuff");
-    var priority = document.getElementById("prioritystuff");
-    var btn = document.getElementById("searchbtn");
+    let container = document.getElementById("assignContainer");
 
-    btn.addEventListener("click", function() {
-        var request = new XMLHttpRequest();
-        request.open("GET","http://localhost:8080/database.php?context=createIssue&title="+title.value+"&description="+description.value+"&assigned="+assign.value+"&type="+bugs.value+"&priority="+priority.value,true);
+    let title = document.getElementById("title");
+    let description = document.getElementById("description");
+    let bugs = document.getElementById("bugstuff");
+    let priority = document.getElementById("prioritystuff");
+    let btn = document.getElementById("searchbtn")
+    let request = new XMLHttpRequest();
+    let assign;
+    request.open('GET',"http://localhost/Info2180-project2/database/index.php?context=getNames");
+    request.send();
+    request.onreadystatechange = function (){
+        if (request.readyState == 4 && request.status == 200) {
+            container.innerHTML= request.response;
+                assign = document.getElementById("assignstuff");
+        }
+    }
+;
+    
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        request.open("GET","http://localhost/Info2180-project2/database/index.php?context=createIssue&title="+title.value+"&description="+description.value+"&assigned="+assign.value+"&type="+bugs.value+"&priority="+priority.value,true);
+        request.send()
         request.onreadystatechange = function() {
-            if (this.DONE && this.status == 200) {
-                document.getElementsByTagName("h2").item(0).innerHTML = request.responseText;
+            if (request.readyState == 4 && request.status == 200){
+                alert(request.responseText);
             }
         }
     });
