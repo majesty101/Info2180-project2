@@ -13,7 +13,7 @@ CREATE TABLE `users`(
 )ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `users` WRITE;
-INSERT INTO `users` (firstname,lastname,password,email)VALUES ('Jody','Harrison','Password123','admin@project2.com');
+INSERT INTO `users` (firstname,lastname,password,email)VALUES ('Jody','Harrison','$2y$10$qEg04tOZIDOZV1MVaPajHuaa7F3YqsIPRaKsT1z3VM0NsMnmR/Gi6','admin@project2.com');
 UNLOCK TABLES;
 
 
