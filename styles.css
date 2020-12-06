@@ -1,5 +1,3 @@
-/*New User Code Start*/
-
 html{
     height: 100%;
 }
@@ -37,12 +35,16 @@ body{
     flex-direction: column;
     background-color: #d3d3d3;
     grid-row: 2;
+<<<<<<< HEAD
+    padding: 20px;
+=======
+    padding: 15px;
+>>>>>>> 817038debb277f1fc8a98190cb9f0b9657eb1324
 }
 
 
 .sidebar div{
     margin-top: 20px;
-    margin-left: 15px;
 }
 
 .sidebar a{
@@ -87,6 +89,9 @@ form label{
 
 /*New User Code End*/
 
+
+/*Create Issue Code Start*/
+
 #description{
     background-color: #ededed;
     border: 1;
@@ -109,7 +114,156 @@ select{
     padding-left: 10px;
 }
 
-
-/*Create Issue Code Start*/
-
 /*Create Issue Code End*/
+#issue{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;  
+}
+
+#allissue{
+    background-color: blue; /* Blue */
+    border: none;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+#openissue{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+#ticket{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.filterbtns {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+}
+
+/*Detailed Issue Code Start*/
+
+.bodygrid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+#bodymain{
+    grid-column: 1;
+    padding: 20px;
+}
+
+.bodygrid h2{
+    font-size: 30px;
+}
+
+#issue{
+    font-size: 10px;
+}
+
+#para{
+    margin-top: 20px;
+    max-width: 800px;
+    text-align: justify;
+}
+
+#dates{
+    margin-top: 20px;
+}
+
+#asidemain label{
+    font-weight: bold;
+}
+
+#aside label{
+    margin-left: 10px;
+}
+
+#asidemain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    grid-column: 2;
+    overflow: hidden;
+
+}
+
+#aside{
+    margin-top: 110px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 0px 30px 0px;
+    height: auto;
+    width: 200px;
+    background-color: #d3d3d3;   
+}
+
+#markclosed{
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 200px;
+    color: #ffffff;
+    background-color: #0c71e0;
+    font-weight: bold;
+
+
+}
+
+#markinprog{
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 200px;
+    background-color: #4c9a2a;
+    color: #ffffff;
+    font-weight: bold;
+
+
+
+}
+/*Detailed Issue Code End*/
