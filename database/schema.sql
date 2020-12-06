@@ -20,7 +20,7 @@ UNLOCK TABLES;
 /* Creating the isssues table*/
 CREATE TABLE `issues`(
     `id` int(5) NOT NULL auto_increment,
-    `title` varchar(50) NOT NULL default '',
+    `title` varchar(20) NOT NULL default '',
     `description` text(100) NOT NULL default '',
     `type` varchar(15) NOT NULL default '',
     `priority` varchar(20) NOT NULL default '',
@@ -31,6 +31,6 @@ CREATE TABLE `issues`(
     `updated` DATETIME NOT NULL default  current_timestamp on update current_timestamp,
 
     PRIMARY KEY (`id`)
-)ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8mb4;
+)ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
     
 
