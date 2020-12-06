@@ -28,6 +28,5 @@ window.onload = function(){
         }else{
             alert("Password must contain one letter, one number, one capital letter and consist of 8 characters");
         }
-
     })
 }
