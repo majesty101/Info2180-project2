@@ -73,6 +73,26 @@ if ($context == 'getNames'){
     $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
     createAssighnments($results);
 }
+if($context == 'details'){
+    $id = $_GET['id'];
+    $sanitizedID = filter_var($id,FILTER_SANITIZE_NUMBER_INT);
+    $stmt = $conn -> query("SELECT * FROM `issues` WHERE id = '$id'");
+    $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+    echo(json_encode($results[0]));
+}
+
+if($context == 'setStatus'){
+    $status = $_GET['status'];
+    $id =$_GET['id'];
+
+    if($status == 'inProgress'){
+        $stmt = $conn -> query("UPDATE `issues` SET status='In Progress' WHERE id = '$id'");
+        exit();
+    }else{
+        $stmt = $conn -> query("UPDATE `issues` SET status='Closed' WHERE id = '$id'");
+        exit();
+    }
+}
 
 }else{
     echo("no Session detected");
@@ -89,7 +109,7 @@ if ($context == 'getNames'){
             <th>Created</th>
         </tr>
         <?php foreach($result as $row):?>
-            <tr>
+            <tr id="row" data-issueid=<?=$row['id']?>>
                 <th><?=$row['title']?></th>
                 <th><?=$row['type']?></th>
                 <th><?=$row['status']?></th>
