@@ -263,3 +263,23 @@ select{
 
 }
 /*Detailed Issue Code End*/
+
+/*table on homescreen*/
+table{
+    border-collapse: collapse;
+    width:100%;
+    padding-top: 2em;
+    float: center;
+}
+table td, th {
+    border: 2px solid #ddd;
+    padding: 10px;
+    
+}
+
+table td{
+    padding-top: 2em;
+}
+#result {
+    padding-top: 10px;
+}
