@@ -113,13 +113,13 @@ if($context == 'setStatus'){
                 <th><?=$row['title']?></th>
                 <th><?=$row['type']?></th>
                 <?php if ($row['status'] == 'Open') { ?>
-                <th style="background-color: green" id='open'><?=$row['status']?></th>
+                <th id='open'><?=$row['status']?></th>
                 
                 <?php }else if($row['status'] == 'Closed') { ?>
-                <th style="background-color: red" id='closed'><?=$row['status']?></th>
+                <th  id='closed'><?=$row['status']?></th>
 
                 <?php }else if($row['status'] == 'In Progress') { ?>
-                <th style="background-color: yellow" id='inprogress'><?=$row['status']?></th>
+                <th  id='inprogress'><?=$row['status']?></th>
                 <?php } ?>
 
                 <th><?=$row['assigned_to']?></th>
