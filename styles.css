@@ -111,26 +111,63 @@ select{
 }
 
 /*Create Issue Code End*/
-#issue{
-    background-color: #4CAF50; /* Green */
+#open{
+    background-color: #2da562; /* Blue */
     border: none;
     color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-decoration: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: inline-block;
     font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
     border-radius: 5px;
-    cursor: pointer;
-    float: right;
-    margin-right: 40px;  
+    cursor: pointer;   
+
+
 }
 
-#allissue{
-    background-color: blue; /* Blue */
+
+
+#inprogress{
+    background-color: #ffdb4d; /* Blue */
     border: none;
-    color: white;
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+#closed{
+    background-color: #FF5400; /* Blue */
+    border: none;
+    color:white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+
+#allissue{
+    background-color: white; /* Blue */
+    border: none;
+    color: black;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 2px;
@@ -224,6 +261,9 @@ select{
     overflow: hidden;
 
 }
+#aside p{
+    margin-left: 10px;
+}
 
 #aside{
     margin-top: 110px;
@@ -250,7 +290,7 @@ select{
 
 }
 
-#markinprog{
+#markinprog, .issueButton{
     margin-top: 20px;
     border: none;
     border-radius: 5px;
@@ -260,10 +300,9 @@ select{
     color: #ffffff;
     font-weight: bold;
     float:right;
-
-
-
 }
+
+
 /*Detailed Issue Code End*/
 
 /*table on homescreen*/
@@ -284,4 +323,9 @@ table td{
 }
 #result {
     padding-top: 10px;
+}
+
+tr,th{
+    border: 0;
+    text-align: center;
 }
